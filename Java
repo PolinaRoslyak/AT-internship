@@ -1,0 +1,68 @@
+public class TestClass {
+
+    public static void main(String[] args) {
+
+        Cat cat = new Cat();
+        Dog dog = new Dog();
+
+        cat.name = "Vasya";
+        dog.name = "Barsik";
+
+        cat.color = "White";
+        dog.color = "Black";
+
+        cat.walk("Backyard");
+        dog.walk("Park");
+
+        cat.feed("Milk");
+        dog.sit();
+
+        System.out.println("Cat name is: " + cat.name);
+        System.out.println("Dog name is: " + dog.name);
+
+        dog.sound();
+        cat.sound();
+
+    }
+}
+
+public class Animal {
+    String name;
+    String color;
+
+    public void walk(String place){
+        System.out.println("We are walking here: " + place);
+    }
+
+    public void sleep(){
+        System.out.println("Zzzz");
+    }
+
+    public void sound(){
+        System.out.println("Hello!");
+    }
+}
+
+public class Dog extends Animal{
+
+    int weight;
+
+    public void sit(){
+        System.out.println("I'm sitting");
+    }
+
+    public void lay(){
+        System.out.println("I'm laying");
+    }
+}
+public class Cat extends Animal {
+
+    public void feed(String feed){
+        System.out.println("I like: " + feed);
+    }
+
+    @Override
+    public void sound(){
+        System.out.println("Mew mew mew!");
+    }
+}
