@@ -37,7 +37,7 @@ public class MainClass {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\student\\IdeaProjects\\testselenium\\drivers\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", "C:\\Users\\at\\geckodriver.exe");
 
         WebDriver driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
